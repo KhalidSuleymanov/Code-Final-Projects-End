@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2+uz7u8mWBtvNhfkYDexlnb9Tn7WO9KZslpIgltgQ2XP6/6+0UHrYRTaU4RcmHI2CbjD6o9fWqOdeI0/slJyrw==",
+  "dgSpecHash": "tGErw3D4TsNcG3hGlIE+haDsCznW4wcCXoz23XDON+kf/Xeuhy3ptRuzQ/nIS1/bY5vFpTG/so9lSBn58mQeow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalid Suleymanov\\Desktop\\CodeFinalProject\\CodeFinalProject.csproj",
+  "projectFilePath": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\CodeFinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khalid Suleymanov\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Khalid Suleymanov\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",

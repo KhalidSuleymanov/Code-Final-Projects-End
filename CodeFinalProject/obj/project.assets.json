@@ -11112,11 +11112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khalid Suleymanov\\Desktop\\CodeFinalProject\\CodeFinalProject.csproj",
+      "projectUniqueName": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\CodeFinalProject.csproj",
       "projectName": "CodeFinalProject",
-      "projectPath": "C:\\Users\\Khalid Suleymanov\\Desktop\\CodeFinalProject\\CodeFinalProject.csproj",
+      "projectPath": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\CodeFinalProject.csproj",
       "packagesPath": "C:\\Users\\Khalid Suleymanov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khalid Suleymanov\\Desktop\\CodeFinalProject\\obj\\",
+      "outputPath": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Khalid Suleymanov\\AppData\\Roaming\\NuGet\\NuGet.Config",
