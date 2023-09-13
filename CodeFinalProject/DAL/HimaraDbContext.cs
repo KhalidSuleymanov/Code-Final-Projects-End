@@ -31,6 +31,7 @@ namespace CodeFinalProject.DAL
         public DbSet<RoomReview> RoomReviews { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<UserContact> UsersContact { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

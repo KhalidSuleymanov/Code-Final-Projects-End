@@ -11,5 +11,6 @@ namespace CodeFinalProject.ViewModels
         public List<Place> Places { get; set; }
         public List<AboutService> AboutServices { get; set; }
         public List<Service> Services { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

@@ -509,6 +509,10 @@
       "PackagePath": "staticwebassets\\Assets\\Images\\review-1.jpg"
     },
     {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Assets\\Images\\review-10.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\review-10.jpg"
+    },
+    {
       "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Assets\\Images\\review-2.jpg",
       "PackagePath": "staticwebassets\\Assets\\Images\\review-2.jpg"
     },
@@ -1071,6 +1075,42 @@
     {
       "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\RestaurantModalImage\\f35de6ef-6acf-4898-be8f-490cef5a0c8cour-image-2.jpg",
       "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\RestaurantModalImage\\f35de6ef-6acf-4898-be8f-490cef5a0c8cour-image-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\1763c724-0e1a-4b48-826a-60c4e3e27d30review-5.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\1763c724-0e1a-4b48-826a-60c4e3e27d30review-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\1deb2e94-02c5-4754-828b-618720a982fcreview-1.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\1deb2e94-02c5-4754-828b-618720a982fcreview-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\2e9004e2-bca4-45de-bb32-227b8c193521review-2.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\2e9004e2-bca4-45de-bb32-227b8c193521review-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\4bd8251a-0574-412c-98c9-401899ee04eareview-7.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\4bd8251a-0574-412c-98c9-401899ee04eareview-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\5d623d94-8a3d-4cad-bf86-1601ca7e25acreview-9.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\5d623d94-8a3d-4cad-bf86-1601ca7e25acreview-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\6ff0c450-1071-41fe-9488-63aa0260c74creview-6.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\6ff0c450-1071-41fe-9488-63aa0260c74creview-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\84904849-fc26-4f28-9d6d-06c8ab1b4915review-4.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\84904849-fc26-4f28-9d6d-06c8ab1b4915review-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\9000e9c7-70dd-4eb3-84e1-04eb5855d002review-3.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\9000e9c7-70dd-4eb3-84e1-04eb5855d002review-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\ReviewImage\\cc19c111-250e-4f2e-9fea-7224f15ae1a8review-8.jpg",
+      "PackagePath": "staticwebassets\\Manage\\Assets\\Uploads\\ReviewImage\\cc19c111-250e-4f2e-9fea-7224f15ae1a8review-8.jpg"
     },
     {
       "Id": "C:\\Users\\Khalid Suleymanov\\Desktop\\MyFinalProject\\Code-Final-Projects-End\\CodeFinalProject\\wwwroot\\Manage\\Assets\\Uploads\\RoomImage\\2151fe9f-be7e-474e-9f40-39dd1b21ebadpicture-2.jpg",

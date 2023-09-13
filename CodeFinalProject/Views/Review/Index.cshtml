@@ -1,4 +1,5 @@
-﻿<main class="review-page">
+﻿@model HomeVM
+<main class="review-page">
     <section class="review-page-title">
         <div class="container">
             <div class="row ms-0 me-0">
@@ -11,247 +12,35 @@
     </section>
     <section class="review-page-section">
         <div class="container">
-            <div class="row g-4 ms-0">
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-1.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Marlene Simpson
-                            </h5>
-                            <span class="review-loc">
-                                Madrid / Spain
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+            <div class="row g-4">
+                @foreach (var item in Model.Reviews)
+                {
+                    <div class="col-lg-4">
+                        <div class="review-card">
+                            <div class="review-image">
+                                <img src="~/Manage/Assets/Uploads/ReviewImage/@item.Image" alt="">
                             </div>
-                            <p class="review-text-p">
-                                I've stayed at this hotel many times and will be back again. The staff is nice and
-                                the rooms are spacious and clean. A big plus for me is that they have a breakfast
-                                buffet.
-                            </p>
+                            <div class="review-text">
+                                <h5 class="review-title">
+                                    @item.Name
+                                </h5>
+                                <span class="review-loc">
+                                    @item.Adress
+                                </span>
+                                <div class="review-icons">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text-p">
+                                    @item.Description
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-2.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Brad Knight
-                            </h5>
-                            <span class="review-loc">
-                                Athens / Greece
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="review-text-p">
-                                I stay at this hotel about once a week. The staff is friendly, and the breakfast is
-                                great. I would recommend staying here to anyone! Thank you for the hospitality!!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-3.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Daryl Phillips
-                            </h5>
-                            <span class="review-loc">
-                                Lisbone / Portugal
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="review-text-p">
-                                Himara hotel is the best hotel I have ever been to. The customer service is
-                                impeccable, and the rooms and location are absolutely gorgeous. The food was
-                                exquisite.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-4.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Felecia Lawson
-                            </h5>
-                            <span class="review-loc">
-                                Paris / France
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="review-text-p">
-                                I've been to a lot of hotels in my life, but this one is definitely the best. The
-                                staff is so friendly and accommodating and the rooms are spacious, clean, and
-                                comfortable.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-5.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Joanne Robinson
-                            </h5>
-                            <span class="review-loc">
-                                New York / USA
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="review-text-p">
-                                I have stayed at many hotels and I would say that this is one of my favorite places.
-                                From the moment I walked in, I felt a sense of calm and happiness, which made it
-                                hard to leave.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-6.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Emily Hill
-                            </h5>
-                            <span class="review-loc">
-                                Rome / Italy
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="review-text-p">
-                                I've been staying at this hotel for the past few years and it's the best place I
-                                ever stayed. The staff is friendly, and I am left impressed with their cleanliness.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-7.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Mabel Hicks
-                            </h5>
-                            <span class="review-loc">
-                                Moscow / Russia
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="review-text-p">
-                                There's no better way to spend your vacations than at a stunning, luxurious and
-                                world-class hotel! I can't tell you how many times I've been to a hotel and had an
-                                amazing time.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-8.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Kent Lambert
-                            </h5>
-                            <span class="review-loc">
-                                Berlin / Germany
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="review-text-p">
-                                I have always loved staying at the Himara hotel. They have the best beds and their
-                                staff is always friendly and professional. I have never had a bad experience here.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="review-card">
-                        <div class="review-image">
-                            <img src="./Assets/Images/review-9.jpg" alt="">
-                        </div>
-                        <div class="review-text">
-                            <h5 class="review-title">
-                                Gerald Schmidt
-                            </h5>
-                            <span class="review-loc">
-                                Zagreb / Croatia
-                            </span>
-                            <div class="review-icons">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="review-text-p">
-                                We've stayed at hotel many times before and we always have a blast. It's the perfect
-                                place for our family to spend quality time together. The staff is so friendly and
-                                accommodating.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </section>

@@ -136,6 +136,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\Manage\Assets\Uploads\BlogImage\" />
     <Folder Include="wwwroot\Manage\Assets\Uploads\AwardImage\" />
+    <Folder Include="wwwroot\Manage\Assets\Uploads\ReviewImage\" />
     <Folder Include="wwwroot\Manage\Assets\Uploads\SliderImage\" />
     <Folder Include="wwwroot\Manage\Assets\Uploads\RestaurantModalImage\" />
   </ItemGroup>
