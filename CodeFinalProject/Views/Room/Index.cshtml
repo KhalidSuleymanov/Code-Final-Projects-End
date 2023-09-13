@@ -1,0 +1,178 @@
+﻿@model ShopViewModel
+<main class="rooms-page">
+    <section class="room-title">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1>Rooms</h1>
+                    <h5><a asp-action="index" asp-controller="home">Home</a> / Rooms</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rooms-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="filtered-terms">
+                        <div class="rooms-view-sorting">
+                            <span class="rooms-sorting">
+                                <form id="searchForm">
+                                    <div class="search-post">
+                                        <input name="searchValue" id="searchValue" type="text" class="blog-search">
+                                        <button type="submit" class="search-button">
+                                            <h6>Search</h6>
+                                        </button>
+                                    </div>
+                                </form>
+                                <div id="searchResults" class="searcs">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="eb-vidget-room-count">
+                            <h2 class="max-title-1">Room</h2>
+                            <div class="inners-1">
+                                @foreach (var item in Model.Names)
+                                {
+                                    <div class="service">
+                                        <input class="form-check-input" type="checkbox" form="formFilter" name="name" value="@item.Name" id="name-@item.Id" @(Model.SelectedName.Contains(item.Name) ? "checked" : "" )>
+                                        <label class="form-check-label" for="category-@item.Id">
+                                            @item.Name
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="eb-vidget-person-count">
+                            <h2 class="max-title">Elder Count</h2>
+                            <div class="inners">
+                                <div class="service">
+                                    <input class="form-check-input" type="radio" form="formFilter" name="elderCount" value="1" id="1" @(Model.SelectedElderCount == 1? "checked" : "")>
+                                    <label class="form-check-label" for="1">
+                                        1 Person
+                                    </label>
+                                </div>
+                                <div class="service">
+                                    <input class="form-check-input" type="radio" form="formFilter" name="elderCount" value="2" id="2" @(Model.SelectedElderCount == 2? "checked" : "")>
+                                    <label class="form-check-label" for="2">
+                                        2 Person
+                                    </label>
+                                </div>
+                                <div class="service">
+                                    <input class="form-check-input" type="radio" form="formFilter" name="elderCount" value="3" id="3" @(Model.SelectedElderCount == 3? "checked" : "")>
+                                    <label class="form-check-label" for="3">
+                                        3 Person
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="eb-vidget-person-count">
+                            <h2 class="max-title">Child Count</h2>
+                            <div class="inners">
+                                <div class="service">
+                                    <input class="form-check-input" type="radio" form="formFilter" name="childCount" value="1" id="1" @(Model.SelectedChilCount == 1? "checked" : "")>
+                                    <label class="form-check-label" for="1">
+                                        1 Person
+                                    </label>
+                                </div>
+                                <div class="service">
+                                    <input class="form-check-input" type="radio" form="formFilter" name="childCount" value="2" id="2" @(Model.SelectedChilCount == 2? "checked" : "")>
+                                    <label class="form-check-label" for="2">
+                                        2 Person
+                                    </label>
+                                </div>
+                                <div class="service">
+                                    <input class="form-check-input" type="radio" form="formFilter" name="childCount" value="3" id="3" @(Model.SelectedChilCount == 3? "checked" : "")>
+                                    <label class="form-check-label" for="3">
+                                        3 Person
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <form method="get" id="formFilter" asp-action="index">
+                            <button class="btn buttonss" type="submit">Filter</button>
+                        </form>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-9 mt-0">
+                    @foreach (var room in @Model.Rooms)
+                    {
+                        <section class="rooms">
+                            <div class="container">
+                                <div class="ronded row">
+                                    <div class="room-image col-lg-4">
+                                        <a class="ok">
+                                            <img src="./Manage/Assets/Uploads/RoomImage/@room.Image" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="room-details col-lg-5">
+                                        <h2 class="rooms-title">
+                                            @room.Name
+                                        </h2>
+                                        <p class="rooms-description">
+                                            @room.Description
+                                        </p>
+                                        <div class="maxperson-count">
+                                            <p class="child-count">
+                                                <span class="childs">Child count : </span> @room.ChildCount
+                                            </p>
+                                            <p class="elder-count">
+                                                <span class="elders">Elder count : </span> @room.ElderCount
+                                            </p>
+                                        </div>
+                                        <div class="room-services">
+                                            <div class="dragscroll">
+                                                <div class="room-service-item">
+                                                    <i class="fa-solid fa-mug-saucer"></i>
+                                                </div>
+                                                <div class="room-service-item">
+                                                    <i class="fa-solid fa-cookie-bite"></i>
+                                                </div>
+                                                <div class="room-service-item">
+                                                    <i class="fa-solid fa-martini-glass-empty"></i>
+                                                </div>
+                                                <div class="room-service-item">
+                                                    <i class="fa-solid fa-wifi"></i>
+                                                </div>
+                                                <div class="room-service-item">
+                                                    <i class="fa-solid fa-person"></i>
+                                                </div>
+                                                <div class="room-service-item">
+                                                    <i class="fa-regular fa-bell"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room-price-details col-lg-3">
+                                        <span class="normal-price">
+                                            <span class="price-currency">
+                                                $
+                                            </span>
+                                            <span class="rooms-price">
+                                                @room.Price
+                                            </span>
+                                        </span>
+                                        <span class="per-night-text">per night</span>
+                                        <a href="/bookonline?roomid=@room.Id">
+                                            <button class="btn mored">
+                                                Book Now <i class="fa-solid fa-arrow-right"></i>
+                                            </button>
+                                        </a>
+                                        <a asp-action="Detail" asp-route-id="@room.Id">
+                                            <button class="btn mored1">
+                                                More Details <i class="fa-solid fa-arrow-right"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

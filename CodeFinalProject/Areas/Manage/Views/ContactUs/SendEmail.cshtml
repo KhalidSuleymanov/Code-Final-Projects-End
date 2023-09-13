@@ -1,0 +1,48 @@
+﻿@model UserContact
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h4 class="mt-4"> Contact Response </h4>
+        </div>
+        <div class="col-md-12">
+            <form asp-action="sendemail" method="post">
+                <div class="form-group mt-2">
+                    <span>Fullname</span>
+                    <br />
+                    <input asp-for="FullName" placeholder="FullName *" class="form-control mt-2" style="border:1px solid #fff">
+                    <span class="text-danger" asp-validation-for="FullName"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <span>Phone</span>
+                    <br />
+                    <input asp-for="Phone" placeholder="Phone *" class="form-control mt-2" style="border:1px solid #fff">
+                    <span class="text-danger" asp-validation-for="Phone"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <span>Email</span>
+                    <br />
+                    <input asp-for="Email" placeholder="Email *" class="form-control mt-2" style="border:1px solid #fff">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <span>Subject</span>
+                    <br />
+                    <input asp-for="Subject" placeholder="Subject *" class="form-control mt-2" style="border:1px solid #fff">
+                    <span class="text-danger" asp-validation-for="Subject"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <span>Message</span>
+                    <br />
+                    <textarea asp-for="Text" placeholder="Message *" class="form-control mt-2" style="border:1px solid #fff"></textarea>
+                </div>
+                <div class="col-md-12">
+                    <h4 class="mt-4">Response</h4>
+                </div>
+                <div class="form-group mt-2">
+                    <textarea asp-for="Response" placeholder="Message *" class="form-control mt-2" style="border:1px solid #fff"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>

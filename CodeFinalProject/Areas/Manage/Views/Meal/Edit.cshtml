@@ -1,0 +1,36 @@
+﻿@model Meal
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h4 class="mt-4"> Meal Edit </h4>
+        </div>
+        <div class="col-md-12">
+            <form method="post" asp-action="edit" enctype="multipart/form-data">
+                <div class="form-group mt-2">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control mt-2" style="border:1px solid #fff;">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="Description">Description</label>
+                    <input asp-for="Description" class="form-control mt-2" style="border:1px solid #fff;">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="Price">Price</label>
+                    <input asp-for="Price" class="form-control mt-2" style="border:1px solid #fff;">
+                    <span asp-validation-for="Price"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="ImageFile">File</label>
+                    <input asp-for="ImageFile" class="form-control mt-2" style="border:1px solid #fff;">
+                    <span asp-validation-for="ImageFile"></span>
+                    <img width="60" height="60" src="~/Manage/Assets/Uploads/MealImage/@Model.Image" />
+                </div>
+                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+

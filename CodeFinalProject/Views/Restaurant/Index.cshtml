@@ -1,0 +1,315 @@
+﻿@model RestaurantViewModel
+
+<main class="restaurant-page">
+
+    <section class="restaurants-title">
+        <div class="container-fluid">
+            <div class="row ms-0 me-0">
+                <div class="mt-4">
+                    <h1>Restaurant</h1>
+                    <h5><a asp-controller="home" asp-action="index">Home</a> / Restaurant</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modern">
+        <img src="./assets/Images/modern-restaurant.jpg" alt="">
+        <div class="modern-text">
+            <img src="~/Assets/Images/modern-restaurant.jpg" alt="">
+            <div class="modern-text-1">
+                <h1>WELCOME TO HIMARA RESTAURANT</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="restaurant-text-section">
+        <div class="container">
+            <div class="row ms-0 me-0">
+                <div class="col-lg-12">
+                    <div class="restaurant-text">
+                        <h4 class="restaurant-title">
+                            Our Restaurant
+                        </h4>
+                        <p class="restaurant-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum commodi incidunt labore
+                            unde
+                            minima numquam rerum, expedita itaque quibusdam ipsa consequuntur cupiditate, officia
+                            iure
+                            earum soluta voluptatem impedit pariatur rem! Nulla, error placeat! Animi harum, eveniet
+                            placeat excepturi perferendis, ex consectetur explicabo voluptatem totam hic, officiis
+                            quisquam? Similique eum itaque, delectus quo deserunt deleniti quibusdam alias sed
+                            commodi
+                            assumenda magnam unde provident praesentium doloribus a asperiores, amet dolores
+                            maiores,
+                            illo quis inventore sunt, nihil nemo pariatur!
+                        </p>
+                        <p class="restaurant-desc">
+                            Culpa neque sint accusantium laboriosam reiciendis corporis, veritatis quos, debitis
+                            doloremque adipisci repudiandae atque, minus! Atque libero, asperiores ex fugit, quia
+                            consequatur modi officiis! Magnam quae atque quasi natus minima optio nobis eveniet
+                            aspernatur vitae deserunt totam in sed, placeat odio cumque, accusantium ducimus.
+                            Molestias
+                            quasi ipsa libero vero dolorem recusandae iusto beatae quae architecto provident
+                            expedita
+                            debitis, animi enim labore deleniti ullam, a nobis asperiores aliquam necessitatibus
+                            error?
+                            Quia consequatur vero assumenda architecto ex, aliquid. Pariatur magnam atque nostrum,
+                            expedita repellendus ut error autem ratione repellat necessitatibus itaque libero
+                            architecto
+                            temporibus reprehenderit, explicabo provident.
+                        </p>
+                    </div>
+                    <div class="restaurant-menu">
+                        <h4 class="restaurant-menu-title">
+                            Our Menu
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <div class="container">
+            <div class="row g-2 ms-0 me-0">
+                @foreach (var item in Model.Meals)
+                {
+                    <div class="col-lg-6">
+                        <div class="menu-1">
+                            <div class="menu-images">
+                                <img src="~/Manage/Assets/Uploads/MealImage/@item.Image" alt="">
+                            </div>
+                            <div class="menu-description">
+                                <div class="name-price">
+                                    <span class="eat-name">
+                                        @item.Name
+                                    </span>
+                                    <span class="price">
+                                        $@item.Price
+                                    </span>
+                                </div>
+                                <div class="menu-desc-text">
+                                    <p class="text-descr">
+                                        @item.Description
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+                <div class="col-lg-12">
+                    <div class="our-menu-text">
+                        <p class="our-menu-p">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quia itaque
+                            accusantium voluptatibus esse animi tenetur adipisci! Iure cumque aliquam tempore quam,
+                            asperiores obcaecati architecto earum vitae a commodi ratione velit nesciunt animi at
+                            dolore illo fugit magnam labore totam eveniet aut sapiente sequi nam doloremque impedit.
+                            Corrupti at, maxime, facere quibusdam consequatur aperiam sapiente eveniet ducimus
+                            veniam fugit recusandae commodi id placeat! Delectus ullam, sed ea laborum tempore velit
+                            vitae, quae suscipit mollitia enim nostrum cupiditate temporibus molestias repellat
+                            dignissimos eveniet quam dicta. Illo maiores aspernatur, temporibus! Accusantium fuga
+                            omnis sapiente.
+                        </p>
+                        <p class="our-menu-p">
+                            At nostrum, tenetur similique adipisci voluptatem mollitia, cum neque autem labore
+                            sapiente dolore accusantium et excepturi odit iusto corporis, facere inventore obcaecati
+                            incidunt, est quam. Maiores aliquid cupiditate tenetur aut fugit! Quis deleniti nesciunt
+                            at officiis! Iusto recusandae numquam ratione excepturi perspiciatis cumque nisi,
+                            explicabo dolorum alias ipsum voluptates non, possimus! Voluptatem adipisci dolor quos
+                            tenetur placeat? inventore sunt, nihil nemo pariatur! Culpa neque sint accusantium
+                            laboriosam reiciendis corporis, veritatis quos, debitis doloremque adipisci repudiandae
+                            atque, minus! Atque libero, asperiores ex fugit, quia consequatur modi officiis! Magnam
+                            quae atque quasi natus minima optio nobis eveniet aspernatur vitae deserunt totam in
+                            sed, placeat odio cumque, accusantium ducimus. Molestias quasi ipsa libero vero dolorem
+                            recusandae iusto beatae quae architecto provident expedita debitis, animi enim labore
+                            deleniti ullam, a nobis asperiores aliquam necessitatibus error? Quia consequatur vero
+                            assumenda architecto ex, aliquid.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-images-section">
+        <div class="container">
+            <div class="row g-3 ms-0 me-0">
+                <div class="col-lg-3">
+                    <div onclick="menuclick(1)" class="modal-and-image">
+                        <div class="our-images">
+                            <img src="./Assets/Images/our-image-1.jpg" alt="">
+                        </div>
+                        <div class="modal menu-modal-1 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-6">
+                                        <img src="./Assets/Images/our-image-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="menuclick(2)" class="modal-and-image">
+                        <div class="our-images">
+                            <img src="./Assets/Images/our-image-2.jpg" alt="">
+                        </div>
+                        <div class="modal menu-modal-2 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-6">
+                                        <img src="./Assets/Images/our-image-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="menuclick(3)" class="modal-and-image">
+                        <div class="our-images">
+                            <img src="./Assets/Images/our-image-3.jpg" alt="">
+                        </div>
+                        <div class="modal menu-modal-3 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-6">
+                                        <img src="./Assets/Images/our-image-3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="menuclick(4)" class="modal-and-image">
+                        <div class="our-images">
+                            <img src="./Assets/Images/our-image-4.jpg" alt="">
+                        </div>
+                        <div class="modal menu-modal-4 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-6">
+                                        <img src="./Assets/Images/our-image-4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="menuclick(5)" class="modal-and-image">
+                        <div class="our-images">
+                            <img src="./Assets/Images/our-image-5.jpg" alt="">
+                        </div>
+                        <div class="modal menu-modal-5 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-6">
+                                        <img src="./Assets/Images/our-image-5.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="menuclick(6)" class="modal-and-image">
+                        <div class="our-images">
+                            <img src="./Assets/Images/our-image-6.jpg" alt="">
+                        </div>
+                        <div class="modal menu-modal-6 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-6">
+                                        <img src="./Assets/Images/our-image-6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="menuclick(7)" class="modal-and-image">
+                        <div class="our-images">
+                            <img src="./Assets/Images/our-image-7.jpg" alt="">
+                        </div>
+                        <div class="modal menu-modal-7 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-6">
+                                        <img src="./Assets/Images/our-image-7.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="menuclick(8)" class="modal-and-image">
+                        <div class="our-images">
+                            <img src="./Assets/Images/our-image-8.jpg" alt="">
+                        </div>
+                        <div class="modal menu-modal-8 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-6">
+                                        <img src="./Assets/Images/our-image-8.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="our-images-text">
+                        <p class="our-images-p">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis autem natus
+                            dicta, possimus necessitatibus cum, et doloribus facilis fugit molestias! Delectus quo
+                            doloribus pariatur dolor sint, ad officiis totam similique quaerat nesciunt quod fugit
+                            libero voluptates deserunt laboriosam hic quia? Ex iusto maiores ipsum ab quis
+                            provident, molestiae veritatis, consequuntur nostrum aliquid quos. Eligendi enim fugiat
+                            fuga aperiam odio accusamus, architecto et, sequi ullam facere, quidem fugit ut.
+                            Praesentium vel quos recusandae perferendis, dolore voluptatibus nesciunt provident quod
+                            ab laborum quisquam alias quaerat optio. Temporibus, saepe, atque, ea inventore
+                            excepturi explicabo tenetur similique, rerum tempora doloremque at nemo alias.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="chefs-cards-section">
+        <div class="container">
+            <div class="row g-4 ms-0 me-0">
+                <div class="col-lg-12">
+                    <div class="restaurant-menu">
+                        <h4 class="restaurant-menu-title">
+                            Our Chefs
+                        </h4>
+                    </div>
+                </div>
+                @foreach (var item in Model.Chefs)
+                {
+                    <div class="col-lg-3">
+                    <div class="chef-card">
+                        <img src="~/Manage/Assets/Uploads/ChefImage/@item.Image" alt="">
+                        <span class="absolute">@item.Position</span>
+                        <div class="chef-text">
+                            <h5>@item.Name</h5>
+                            <p>
+                                @item.Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                }
+                
+            </div>
+        </div>
+    </section>
+</main>

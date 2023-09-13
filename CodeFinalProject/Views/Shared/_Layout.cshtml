@@ -1,0 +1,519 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/Assets/Css/bootstrap.css">
+    <link rel="stylesheet" href="~/Assets/Css/style.css">
+    <link rel="stylesheet" href="~/Assets/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="~/Assets/slick-1.8.1/slick/slick.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Himara Hotel</title>
+</head>
+<body>
+    <section class="index-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header-logo">
+                        <a href="./index.html"><img src="~/Assets/Images/header.logo.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="main-menu">
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a asp-action="index" asp-controller="home">
+                                    <span class="menu-items-name">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-action="index" asp-controller="aboutus">
+                                    <span class="menu-items-name">
+                                        ABOUT US
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-action="index" asp-controller="room">
+                                    <span class="menu-items-name">
+                                        Rooms
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span class="menu-items-name">
+                                        Pages
+                                    </span>
+                                </a>
+                                <div class="pages-bottom-div">
+                                    <ul class="pages-bottom">
+
+                                        <li class="pages-bottom-items">
+                                            <a asp-action="index" asp-controller="location">
+                                                <span class="pages-bottom-items-design">
+                                                    LOCATION
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="pages-bottom-items">
+                                            <a asp-action="index" asp-controller="ourstaff">
+                                                <span class="pages-bottom-items-design">
+                                                    OUR STAFF
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="pages-bottom-items">
+                                            <a asp-action="index" asp-controller="restaurant">
+                                                <span class="pages-bottom-items-design">
+                                                    RESTAURANT
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="pages-bottom-items">
+                                            <a asp-action="index" asp-controller="place">
+                                                <span class="pages-bottom-items-design">
+                                                    PLACES
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="pages-bottom-items">
+                                            <a asp-action="index" asp-controller="review">
+                                                <span class="pages-bottom-items-design">
+                                                    REVIEWS
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="pages-bottom-items">
+                                            <a asp-action="index" asp-controller="spa">
+                                                <span class="pages-bottom-items-design">
+                                                    SPA
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="pages-bottom-items">
+                                            <a asp-action="index" asp-controller="gallery">
+                                                <span class="pages-bottom-items-design">
+                                                    GALLERY
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="pages-bottom-items">
+                                            <a asp-action="index" asp-controller="service">
+                                                <span class="pages-bottom-items-design">
+                                                    SERVICES
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-action="index" asp-controller="blog">
+                                    <span class="menu-items-name">
+                                        Blog
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-action="index" asp-controller="contactus">
+                                    <span class="menu-items-name">
+                                        Contact Us
+                                    </span>
+                                </a>
+                                <div class="pages-bottom-div">
+                                    <ul class="pages-bottom">
+                                        @if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
+                                        {
+                                            <li class="pages-bottom-items">
+                                                <a asp-action="profile" asp-controller="account">
+                                                    <span class="pages-bottom-items-design">
+                                                        @User.Identity.Name
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="pages-bottom-items">
+                                                <a asp-action="logout" asp-controller="account">
+                                                    <span class="pages-bottom-items-design">
+                                                        LogOut
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="pages-bottom-items">
+                                                <a asp-action="login" asp-controller="account">
+                                                    <span class="pages-bottom-items-design">
+                                                        Login
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="pages-bottom-items">
+                                                <a asp-action="register" asp-controller="account">
+                                                    <span class="pages-bottom-items-design">
+                                                        Register
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu-button">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-action="index" asp-controller="bookonline" class="btn eb-btn">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span class="menu-button-name">
+                                            BOOK ONLINE
+                                        </span>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a asp-action="login" asp-controller="account" class="btn eb-btn">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span class="menu-button-name">
+                                            BOOK ONLINE
+                                        </span>
+                                    </a>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hamburg-menu">
+        <div class="hamburg-header-logo">
+            <a href="./index.html"><img src="~/Assets/Images/header.logo.svg" alt=""></a>
+        </div>
+        <div id="hamburg-menu-icons" class="">
+            <div class="ham-menus">
+                <i id="icon" class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="ham-menu" class="d-none">
+        <div class="ham-menu-pages">
+            <div class="ham-menu-title">
+                <h1>MENU</h1>
+            </div>
+            <div class="ham-menu-inc-pages">
+                <ul class="full-nav-pages">
+                    <li class="nav-pages">
+                        <a href="./index.html">
+                            <span class="nav-first-page">
+                                Home
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./rooms.html">
+                            <span class="nav-first-page">
+                                Rooms
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./blog.html">
+                            <span class="nav-first-page">
+                                Blog
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./contact.html">
+                            <span class="nav-first-page">
+                                Contact Us
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./aboutus.html">
+                            <span class="nav-first-page">
+                                About us
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./location.html">
+                            <span class="nav-first-page">
+                                Location
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./ourStaff.html">
+                            <span class="nav-first-page">
+                                Staff
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./ourrestaurant.html">
+                            <span class="nav-first-page">
+                                Restaurant
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./places.html">
+                            <span class="nav-first-page">
+                                Places
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./review.html">
+                            <span class="nav-first-page">
+                                Reviews
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./spa.html">
+                            <span class="nav-first-page">
+                                Spa
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./gallerypage.html">
+                            <span class="nav-first-page">
+                                Gallery
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-pages">
+                        <a href="./services.html">
+                            <span class="nav-first-page">
+                                Services
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-button-1">
+                        <a href="./bookonline.html" class="btn eb-btn-1">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="menu-button-title">
+                                BOOK ONLINE
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer-marg row mt-5">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-1">
+                        <h5>Himara</h5>
+                        <div class="adress">
+                            <span class="adress-1">
+                                <strong>Address</strong>
+                                <p> Lorem Ipsum 24, Lorem</p>
+                            </span>
+                            <span class="adress-1">
+                                <strong>Phone</strong>
+                                <p> +100 244432434</p>
+                            </span>
+                            <span class="adress-1">
+                                <strong>Email</strong>
+                                <p> contact@hotelhimara.com</p>
+                            </span>
+                        </div>
+                        <div class="footer-icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+                            <i class="fa-brands fa-airbnb"></i>
+                        </div>
+                        <div class="accept">
+                            <span><strong>We accept</strong></span>
+                            <div class="icon-images">
+                                <i class="fa-brands fa-cc-paypal"></i>
+                                <i class="fa-brands fa-cc-mastercard"></i>
+                                <i class="fa-brands fa-cc-visa"></i>
+                                <i class="fa-brands fa-cc-amex"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-2">
+                        <h6>Useful Links</h6>
+                        <div class="useful-tems">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-1">
+                                            My Account
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-2">
+                                            Location
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-3">
+                                            Our Staff
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-4">
+                                            Our Restaurant
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-5">
+                                            Spa & Wellness
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-2">
+                        <h6>Support</h6>
+                        <div class="useful-tems">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-1">
+                                            Help Center
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-2">
+                                            Contact Us
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-3">
+                                            Cancellation Options
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-4">
+                                            Safety Informations
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-5">
+                                            Covid-19 Measures
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-2">
+                        <h6>Latest News</h6>
+                        <div class="useful-tems">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-1">
+                                            10 + 1 Tasteful Cocktails
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-2">
+                                            Sightseeing Walks By Day
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-3">
+                                            Top 10 Amazing Beach Views
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-4">
+                                            Wedding Ceremony At Himara
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="a-useful-des-5">
+                                            Breakfast Time At Himara Hotel
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-end col-lg-12">
+            <div class="footer-end-1 col-lg-6">
+                © 2023 Modern. Crafted with <i class="fa-solid fa-heart"></i> by <a href="#">
+                    Eagle-Themes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/Assets/JS/slider.js"></script>
+    <script src="~/Assets/JS/booking.js"></script>
+    <script src="~/Assets/JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

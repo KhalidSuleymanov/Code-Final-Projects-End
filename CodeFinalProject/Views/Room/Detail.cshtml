@@ -1,0 +1,295 @@
+﻿@model RoomDetailViewModel
+<main class="room-detail">
+    <section class="room-detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="room-detail-name">
+                        <h1>@Model.Room.Name</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="room-detail-price">
+                        <h2>$@Model.Room.Price </h2>
+                        <span>/ per night</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="room-big-image-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="big-image">
+                        <img src="~/Manage/Assets/Uploads/RoomImage/@Model.Room.Image" alt="">
+                    </div>
+                    <div class="room-image-icons">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="icon-1">
+                                    <i class="room-ic-2 fa-solid fa-child"></i>
+                                    <div class="icon-description">
+                                        <h1 class="max-icon">Max. Guests</h1>
+                                        <span><b>@Model.Room.ElderCount Adults / @Model.Room.ChildCount Children</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="icon-1">
+                                    <i class="room-ic fa-regular fa-calendar-days"></i>
+                                    <div class="icon-description">
+                                        <h1 class="max-icon">Booking Nights</h1>
+                                        <span><b>5 Min.</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="icon-1">
+                                    <i class="room-ic-1 fa-solid fa-bed fa-xs"></i>
+                                    <div class="icon-description">
+                                        <h1 class="max-icon">Bed Type</h1>
+                                        <span><b>King Size</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="icon-1">
+                                    <i class="room-ic fa-brands fa-buromobelexperte"></i>
+                                    <div class="icon-description">
+                                        <h1 class="max-icon">Area</h1>
+                                        <span><b>100 m²</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-big-image-text">
+                        <p>
+                            Aliquam erat volutpat. Morbi semper tempus quam. Aenean quis porta velit. Aliquam dictum
+                            neque lobortis ipsum hendrerit facilisis. Curabitur vel sapien convallis, convallis
+                            metus id, facilisis metus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                            ultrices posuere cubilia curae; Morbi aliquet a lacus ut maximus. Pellentesque a
+                            vestibulum risus. Proin non placerat metus, sed molestie nisi. Nulla ornare diam ornare
+                            odio varius, sit amet placerat enim facilisis. Phasellus vel purus quis lorem volutpat
+                            lacinia eu a eros, maecenas at erat purus.Etiam vel lectus eu lorem mattis sollicitudin
+                            quis at lectus. Donec dignissim nisi sed vestibulum ornare, interdum et malesuada fames
+                            ac ante ipsum primis in faucibus. Ut viverra arcu a metus interdum, at laoreet elit
+                            accumsan.
+                        </p>
+                        <p>
+                            Nulla elementum enim quis nisi elementum, a placerat eros accumsan. Mauris aliquet
+                            tincidunt erat, at dignissim neque bibendum vel. Donec scelerisque odio at malesuada
+                            venenatis. Etiam vel lectus eu lorem mattis sollicitudin quis at lectus. Donec dignissim
+                            nisi sed vestibulum ornare. Maecenas volutpat, erat vitae ultricies consequat, augue
+                            nisi varius nulla, facilisis tincidunt ligula tellus vitae tortor. Aenean felis orci,
+                            venenatis vel lectus sit amet, maximus elementum magna. Interdum et malesuada fames ac
+                            ante ipsum primis in faucibus. Ut viverra arcu a metus interdum, at laoreet elit
+                            accumsan.
+                        </p>
+                    </div>
+                    <div class="room-services">
+                        <div class="col-lg-12">
+                            <div class="services-title">
+                                <p>Room Services</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-mug-saucer"></i>
+                                    <span>Coffee Maker</span>
+                                </div>
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <span>WiFi</span>
+                                </div>
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                    <span>Air Conditioner</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-cookie-bite"></i>
+                                    <span>Breakfast</span>
+                                </div>
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-person-dress"></i>
+                                    <span>Towels</span>
+                                </div>
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-tv"></i>
+                                    <span>Widescreen TV</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-martini-glass"></i>
+                                    <span>Mini Bar</span>
+                                </div>
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-bell-concierge"></i>
+                                    <span>Microwave</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-services-1">
+                        <div class="col-lg-12">
+                            <div class="services-title">
+                                <p>Additional Services</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-person-hiking"></i>
+                                    <span>Excursions</span>
+                                </div>
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-hot-tub-person"></i>
+                                    <span>Jacuzzi</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-plane"></i>
+                                    <span>Airport Pickup</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="icon-and-names">
+                                    <i class="fa-solid fa-spa"></i>
+                                    <span>Massage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="reviews-title">
+                            <p>Room Reviews</p>
+                        </div>
+                    </div>
+                    @foreach (var item in Model.Room.RoomReviews)
+                    {
+                        <div class="room-reviews row">
+                            <div class="col-lg-2">
+                                <div class="review-image">
+                                    <img src="~/Assets/Images/comment-avatar.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="comment-box">
+                                    <div class="comment-header">
+                                        <h4>@item.AppUser.FullName</h4>
+                                    </div>
+                                    <div class="comment-icons">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="comment-info">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>@item.CreatedAt.ToString("dd MMMM yyyy")</span>
+                                    </div>
+                                    <div class="comment-text">
+                                        <p>
+                                            @item.Text
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @Html.Partial("_RoomReviewFormPartial", Model.Review)
+                    <div class="col-lg-12">
+                        <div class="reviews-title">
+                            <p>Similar Rooms</p>
+                        </div>
+                    </div>
+                    <div class="similar-rooms row">
+                        <div class="col-lg-4">
+                            <a class="image-href-1" href="./roomdetail.html">
+                                <div class="simic">
+                                    <div class="similar-room-details">
+                                        <h4>Himara View Suite </h4>
+                                        <div class="room-price-details-1">
+                                            <span class="price">
+                                                <strong>
+                                                    <div class="price-currency">$</div>
+                                                    <div class="price-amount">350,00</div>
+                                                </strong>
+                                            </span>
+                                            <span class="night">/ night</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="image-href-2" href="./roomdetail.html">
+                                <div class="simic">
+                                    <div class="similar-room-details">
+                                        <h4>Triple Room</h4>
+                                        <div class="room-price-details-1">
+                                            <span class="price">
+                                                <strong>
+                                                    <div class="price-currency">$</div>
+                                                    <div class="price-amount">250,00</div>
+                                                </strong>
+                                            </span>
+                                            <span class="night">/ night</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="image-href-3" href="./roomdetail.html">
+                                <div class="simic">
+                                    <div class="similar-room-details">
+                                        <h4>Luxury Suite</h4>
+                                        <div class="room-price-details-1">
+                                            <span class="price">
+                                                <strong>
+                                                    <div class="price-currency">$</div>
+                                                    <div class="price-amount">450,00</div>
+                                                </strong>
+                                            </span>
+                                            <span class="night">/ night</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="checkboxes">
+                        <div class="checkboxes-boxes">
+                            <h2 class="titles">Book Your Room</h2>
+                            <div class="rezerv-div">
+                                <div class="rezerv-page-padd">
+                                    <form asp-action="rezerv" method="post">
+                                        <div class="col-md-12">
+                                            <a class="btn btn-outlin" href="/bookonline?roomid=@Model.Room.Id">
+                                                Check Availability
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotel-image">
+                        <img src="~/Assets/Images/blog-himara-image.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

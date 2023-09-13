@@ -1,0 +1,75 @@
+﻿@model Place
+
+<main class="place-details">
+    <section class="places-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <h1>Places</h1>
+                    <h5><a href="./index.html">Home</a> / Places</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="place-big-image">
+        <div class="big-place">
+            <img src="~/Manage/Assets/Uploads/PlaceImage/@Model.Image" alt="">
+            <div class="container">
+                <div class="row me-1">
+                    <div class="col-lg-3">
+                        <h1 class="place-title">@Model.Name</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="detail-text">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="texts">
+                    <h2 class="text-title">About For @Model.Name</h2>
+                    <p class="text-desc mt-2">
+                        @Model.Description1
+                        <br>
+                        <br>
+                        @Model.Description2
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="detail-images">
+        <div class="container">
+            <div class="row mt-3 g-4 ms-1">
+                <div class="col-lg-4">
+                    <div class="images">
+                        <a href=""><img src="~/Assets/Images/detail-1.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="images">
+                        <a href=""><img src="~/Assets/Images/detail-2.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="images">
+                        <a href=""><img src="~/Assets/Images/detail-3.jpg" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="detail-text-1">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="text-2">
+                    <p class="text-desc mt-3">
+                        @Model.Description1
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

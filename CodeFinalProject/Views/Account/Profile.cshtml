@@ -1,0 +1,64 @@
+﻿@model ProfileViewModel
+<main class="our-profile">
+    <section class="profile-title">
+        <div class="container-fluid">
+            <div class="row ms-0">
+                <div>
+                    <h1>My Account</h1>
+                    <h5><a href="./index.html">Home</a> / My Account</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="profile-form">
+        <div class="container">
+            <div class="row ms-0 me-0">
+                <div class="col-lg-8">
+                    <div class="page-details">
+                        <h3>Account Details</h3>
+                        <div class="account-details-form">
+                            @Html.Partial("_MemberUpdateFormPartial", Model.Member)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="page-istrak">
+                        @foreach (var reserv in Model.Reservations)
+                        {
+                            <h3>Reservations</h3>
+                            <div class="single-ipsu">
+                                <p>Guest Name:</p>
+                                <p>@reserv.FullName</p>
+                            </div>
+                            <div class="single-ipsu">
+                                <p>Reserv Start Date:</p>
+                                <p>@reserv.ReservDate</p>
+                            </div>
+                            <div class="single-ipsu">
+                                <p>Reserv End Date:</p>
+                                <p>@reserv.ReservEndDate</p>
+                            </div>
+                            <div class="single-ipsu">
+                                <p>Reserv Status:</p>
+                                <p>@reserv.ReservationStatus</p>
+                            </div>
+                            <div class="single-ipsu">
+                                <p>Guest Phone Number:</p>
+                                <p>@reserv.PhoneNumber</p>
+                            </div>
+                            <div class="single-ipsu">
+                                <p>Guest Email:</p>
+                                <p>@reserv.Email</p>
+                            </div>
+                            <div class="single-ipsu">
+                                <p>Reserved Room:</p>
+                                <p>@reserv.Room.Name</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

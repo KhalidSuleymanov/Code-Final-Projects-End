@@ -1,0 +1,58 @@
+﻿@model RoomReview
+
+<div class="col-lg-12 mt-5">
+    <div class="comment-form">
+        <div class="comment-respond">
+            <div class="comment-reply-title">
+                <div class="section-title">
+                    <h4 class="comment-title">Leave your comment</h4>
+                    <p class="section-subtitle">
+                        Join the discussion and tell us your opinion.
+                    </p>
+                </div>
+            </div>
+            <form asp-controller="Room" asp-action="RoomReview" method="post" id="commentform" class="comment-form">
+                <div class="rates">
+                    <label class="col-form-label">
+                        <span class="text-danger"></span>Rating
+                    </label>
+                    <br>
+                    <div class="rat col-lg-3">
+                        <p>Bad</p>&nbsp;
+                        <input type="radio" value="1" name="Rate">
+                        &nbsp;
+                        <input type="radio" value="2" name="Rate">
+                        &nbsp;
+                        <input type="radio" value="3" name="Rate">
+                        &nbsp;
+                        <input type="radio" value="4" name="Rate">
+                        &nbsp;
+                        <input type="radio" value="5" name="Rate" checked>
+                        &nbsp;<p>Good</p>
+                    </div>
+                </div>
+                <div class="comment-form-comment">
+                    <label asp-for="Text"></label>
+                    <textarea asp-for="Text" class="form-control"
+                              placeholder="Your Comment"></textarea>
+                    <input type="hidden" name="RoomId" value="@Model.RoomId" />
+                </div>
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
+                {
+                    <p class="form-submit">
+                        <input type="submit" name="submit" id="submit" class="btn"
+                           value="Submit your comment">
+                    </p>
+                }
+                else
+                {
+                    <p class="form-submit">
+                        <input asp-action="login" asp-controller="account" type="submit" name="submit" id="submit" class="btn"
+                           value="Submit your comment">
+                    </p>
+                }
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿@using CodeFinalProject.ViewModels
+@model MemberRegisterViewModel
+
+<main class="our-register">
+    <section class="register-title">
+        <div class="container-fluid">
+            <div class="row ms-0">
+                <div>
+                    <h1>Register</h1>
+                    <h5><a href="./index.html">Home</a> / Register</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="register-form">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="register-page">
+                        <div class="register-page-padd">
+                            <h2>Register</h2>
+                            <form asp-action="register" method="post">
+                                <div class="col-md-12 col-12 mb--15">
+                                    <label asp-for="FullName">Full Name</label>
+                                    <input asp-for="FullName" class="mb-0 form-control">
+                                    <span class="text-danger" asp-validation-for="FullName"></span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <label asp-for="Email">Email</label>
+                                    <input asp-for="Email" class="mb-0 form-control">
+                                    <span class="text-danger" asp-validation-for="Email"></span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <label asp-for="UserName">UserName</label>
+                                    <input asp-for="UserName" class="mb-0 form-control">
+                                    <span class="text-danger" asp-validation-for="UserName"></span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <label asp-for="Phone">Phone</label>
+                                    <input asp-for="Phone" class="mb-0 form-control">
+                                    <span class="text-danger" asp-validation-for="Phone"></span>
+                                </div>
+
+                                <div class="col-12 mt-3">
+                                    <label asp-for="Password">Password</label>
+                                    <input asp-for="Password" class="mb-0 form-control">
+                                    <span class="text-danger" asp-validation-for="Password"></span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <label asp-for="ConfirmPassword">ConfirmPassword</label>
+                                    <input asp-for="ConfirmPassword" class="mb-0 form-control">
+                                    <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                                </div>
+                                <div class="col-md-12 mt-4">
+                                    <button type="submit" class="btn btn-outlined">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

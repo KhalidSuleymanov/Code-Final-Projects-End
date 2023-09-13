@@ -1,0 +1,61 @@
+﻿@model AdminLoginViewModel
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/Assets/Css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/Assets/managestyle/style.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <main class="manage-dashboard-style">
+        <div class="container">
+            <div class="absino row">
+                <div class="col-lg-6">
+                    <img src="~/Assets/ManageImage/Paxels.jpg" alt="">
+                    <div class="divss">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="dashbord">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h3 class="dashboard-title">Sign In</h3>
+                        </div>
+                        <form asp-action="login" method="post">
+                            <div class="form-floatings">
+                                <input asp-for="UserName" class="forms" placeholder="Enter UserName ...">
+                            </div>
+                            <div class="form-floatings">
+                                <input asp-for="Password" class="forms">
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between" placeholder="Enter Password ...">
+                                <a class="marges" href="">Forgot Password</a>
+                            </div>
+                            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                            <div class="form-floatings">
+                                <button type="submit" class="btn btn-primary subsunt">Sign In</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

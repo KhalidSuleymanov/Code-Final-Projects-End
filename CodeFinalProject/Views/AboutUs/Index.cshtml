@@ -1,0 +1,152 @@
+﻿@model AboutViewModel
+
+<main class="about-us">
+    <section class="about-us-title">
+        <div class="container-fluid">
+            <div class="row ms-0 me-0">
+                <div class="mt-4">
+                    <h1>About Us</h1>
+                    <h5><a asp-controller="home" asp-action="index">Home</a> / About us</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hotel-about">
+        <div class="container">
+            <div class="row ms-2 me-0">
+                <div class="col-lg-8">
+                    <div class="hotel-title">
+                        <h1>Hotel Himara Since 1990</h1>
+                        <span>We provide high quality accommodation services</span>
+                        <p class="mt-4">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                            doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                            sit aspernatur aut odit aut fugit, sed quia.
+                        </p>
+                        <p>
+                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                            velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+                            aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
+                            eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+                            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="./Assets/Images/Himara-Luxury-Otel-1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-title">
+        <div class="container">
+            <div class="row ms-2 me-0">
+                <div class="col-lg-12 mt-4">
+                    <h1>Services</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-cards">
+        <div class="container">
+            <div class="row g-4 ms-2 me-0">
+                @foreach (var item in Model.AboutServices)
+                {
+                    <div class="col-lg-3">
+                        <img src="~/Manage/Assets/Uploads/AboutServiceImage/@item.Image" alt="">
+                    </div>
+                }
+            </div>
+            <div class="services-parag row ms-2 me-0">
+                <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                    voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                    laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+                    in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                    quo voluptas nulla pariatur?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-title">
+        <div class="container">
+            <div class="row ms-2 me-0">
+                <div class="col-lg-12">
+                    <h1>Features</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-cards">
+        <div class="container">
+            <div class="row g-4 ms-2 me-0">
+                @foreach (var item in Model.Features)
+                {
+                    <div class="col-lg-3">
+                        <div class="count-card">
+                            <div class="@item.IconImage"></div>
+                            <div class="features-text ms-2">
+                                <h1 class="text-lg-center">@item.FeatureCount</h1>
+                                <span style="font-size:15px;">@item.Name</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="features-dolor">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                        ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
+                        pulvinar dapibus leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                        tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                        leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                        ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-title">
+        <div class="container">
+            <div class="row mb-4 ms-2 me-0">
+                <div class="col-lg-12 mt-4">
+                    <h1>Awesome Staff</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="avesome-cards">
+        <div class="container">
+            <div class="row g-4 ms-2 me-0">
+                @foreach (var item in Model.Staffs)
+                {
+                    <div class="col-lg-3 mb-5">
+                        <div class="aves-card">
+                            <img src="~/Manage/Assets/Uploads/StaffImage/@item.Image" alt="">
+                            <span class="position">@item.Position</span>
+                            <div class="aves-text">
+                                <h5>@item.Name</h5>
+                                <p>@item.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

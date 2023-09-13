@@ -1,0 +1,148 @@
+﻿@model ContactViewModel
+
+
+<main class="contact-page">
+    @if (TempData["Success"] != null)
+    {
+        <input type="hidden" value="@TempData["Success"]" id="successMessage" />
+    }
+    <section class="contacts-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mt-4">
+                    <h1>Contact Us</h1>
+                    <h5><a asp-controller="home" asp-action="index">Home</a> / Contact Us</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-map">
+        <div class="map-design">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12010.094510613722!2d1.4505615520169857!3d41.188556339205974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2saz!4v1691527522944!5m2!1sen!2saz"
+                        width="1226" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="contact-inputs">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="inputs-blok">
+                        <div class="inputs-text">
+                            <h1>Contact Us</h1>
+                            <span>Lets Talk</span>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus sit, fugiat at in
+                                assumenda corrupti autem iste eveniet eaque vitae beatae tenetur, voluptatem eius.
+                                Numquam.
+                            </p>
+                        </div>
+                        <form asp-controller="contactus" asp-action="sendmessage" method="post">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+
+                                <div class="square-inputs">
+                                    <span class="input-name">Your name</span>
+                                    <br>
+                                    <input disabled name="FullName" value="@Model.FullName" placeholder="FullName *" type="text" required class="name-input">
+                                    <input type="hidden" name="FullName" value="@Model.FullName">
+                                </div>
+
+                                <div class="square-inputs">
+                                    <span class="input-name">Your email</span>
+                                    <br>
+                                    <input disabled name="Email" value="@Model.Email" placeholder="Email *" type="email" required class="email-input">
+                                    <input type="hidden" name="Email" value="@Model.Email">
+                                </div>
+
+                                <div class="square-inputs">
+                                    <span class="input-name">Your phone</span>
+                                    <br>
+                                    <input disabled name="Phone" value="@Model.Phone" placeholder="Phone *" type="text" required class="phone-input">
+                                    <input type="hidden" name="Phone" value="@Model.Phone">
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="square-inputs">
+                                    <span class="input-name">Your name</span>
+                                    <br>
+                                    <input asp-for="FullName" placeholder="FullName *" class="name-input">
+                                    <span class="text-danger" asp-validation-for="FullName"></span>
+                                </div>
+
+                                <div class="square-inputs">
+                                    <span class="input-name">Your email</span>
+                                    <br>
+                                    <input asp-for="Email" placeholder="Email *" class="email-input">
+                                    <span class="text-danger" asp-validation-for="Email"></span>
+                                </div>
+
+                                <div class="square-inputs">
+                                    <span class="input-name">Your phone</span>
+                                    <br>
+                                    <input asp-for="Phone" placeholder="Phone *" class="phone-input">
+                                    <span class="text-danger" asp-validation-for="Phone"></span>
+                                </div>
+                            }
+                            <div class="square-inputs col-lg-12">
+                                <span class="input-name">Your Subject</span>
+                                <br>
+                                <input asp-for="Subject" placeholder="Subject *" class="phone-input">
+                                <span class="text-danger" asp-validation-for="Subject"></span>
+                            </div>
+                            <div class="square-inputs">
+                                <span class="input-name">Your message</span>
+                                <br>
+                                <textarea asp-for="Text" placeholder="Message *" cols="50" rows="10"></textarea>
+                            </div>
+
+                            <input class="but-inp" type="submit" value="Submit your message">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="find-us">
+                        <div class="inputs-text">
+                            <h1 class="find-title">Get In Touch</h1>
+                            <p class="find-text">How to find us</p>
+                        </div>
+                        <div class="contact-info">
+                            <span class="d-flex">
+                                <i class="fa-solid fa-map-pin icon-aft"></i>
+                                <p>Lorem ipsum dolor, 25, Himara</p>
+                            </span>
+                        </div>
+                        <div class="contact-info">
+                            <span class="d-flex">
+                                <i class="fa-solid fa-envelope icon-aft"></i>
+                                <p>contact@hotelhimara.com</p>
+                            </span>
+                        </div>
+                        <div class="contact-info">
+                            <span class="d-flex">
+                                <i class="fa-solid fa-phone-flip icon-aft"></i>
+                                <p>+1 888 123 4567</p>
+                            </span>
+                        </div>
+                        <div class="contact-info">
+                            <span class="d-flex">
+                                <i class="fa-solid fa-earth-oceania icon-aft"></i>
+                                <p>www.hotelhimara.com</p>
+                            </span>
+                        </div>
+                        <div class="icons d-flex">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

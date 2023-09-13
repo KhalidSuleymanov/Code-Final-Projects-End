@@ -1,0 +1,208 @@
+﻿@model BookOnlineVM
+
+<main class="book-online">
+    <section class="book-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <h1>Booking</h1>
+                    <h5><a asp-controller="home" asp-action="index">Home</a> / Reservation</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Reservation">
+        <div class="container">
+            @if (Model.IsSuccess)
+            {
+                <div class="alert alert-success" role="alert">
+                    success link <a asp-controller="Home" asp-action="Index">Home Page</a>
+                </div>
+            }
+            @if (Model.IsReserved)
+            {
+                <div class="alert alert-warning" role="alert">
+                    <span>Reservations</span>
+                    @for (int i = 0; i < Model.ReservedRooms.Count; i++)
+                    {
+                        <p><span>№@(i + 1)</span>  Start Date : @Model.ReservedRooms[i].ReservDate  End Date : @Model.ReservedRooms[i].ReservEndDate</p>
+                    }
+                </div>
+            }
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="full-book">
+                        <form method="post" asp-controller="BookOnline" asp-action="Index" id="request"
+                              class="contactForum">
+                            <div class="row">
+                                <div class="additional-services">
+                                    <h4>İncluded Services</h4>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="icon-and-names">
+                                                <i class="fa-solid fa-mug-saucer"></i>
+                                                <span>Coffee Maker</span>
+                                            </div>
+                                            <div class="icon-and-names">
+                                                <i class="fa-solid fa-wifi"></i>
+                                                <span>WiFi</span>
+                                            </div>
+                                            <div class="icon-and-names">
+                                                <i class="fa-solid fa-snowflake"></i>
+                                                <span>Air Conditioner</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="icon-and-names">
+                                                <i class="fa-solid fa-cookie-bite"></i>
+                                                <span>Breakfast</span>
+                                            </div>
+                                            <div class="icon-and-names">
+                                                <i class="fa-solid fa-person-dress"></i>
+                                                <span>Towels</span>
+                                            </div>
+                                            <div class="icon-and-names">
+                                                <i class="fa-solid fa-tv"></i>
+                                                <span>Widescreen TV</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="icon-and-names">
+                                                <i class="fa-solid fa-martini-glass"></i>
+                                                <span>Mini Bar</span>
+                                            </div>
+                                            <div class="icon-and-names">
+                                                <i class="fa-solid fa-bell-concierge"></i>
+                                                <span>Microwave</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reserv-tit">
+                                    <h5>Billing Details</h5>
+                                </div>
+                                <div class="names-and-details col-lg-12">
+                                    <label asp-for="FullName" class="contact_label">
+                                        Full Name<span class="text-danger"></span>
+                                    </label>
+                                    <span asp-validation-for="FullName" class="text-danger"></span>
+                                    <input asp-for="FullName" parsley-trigger="change" required
+                                           class="form_contact form-control">
+                                </div>
+                                <div class="names-and-details col-lg-6">
+                                    <label asp-for="Email" class="contact_label  Emaillabel">
+                                        Email<span class="text-danger"></span>
+                                    </label>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                    <input asp-for="Email" parsley-trigger="change" required
+                                           class="form_contact form-control">
+                                </div>
+                                <div class="names-and-details col-lg-6">
+                                    <label asp-for="PhoneNumber" class="contact_label PhoneNumberlabel">
+                                        Phone
+                                        Number<span class="text-danger"></span>
+                                    </label>
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                    <input asp-for="PhoneNumber" parsley-trigger="change" required
+                                           class="form_contact form-control ">
+                                </div>
+                                <div class="names-and-details col-lg-6">
+                                    <label asp-for="ReservStartDate" class="contact_label">
+                                        Reservation Start
+                                        Date<span class="text-danger"></span>
+                                    </label>
+                                    <span asp-validation-for="ReservStartDate" class="text-danger without"></span>
+                                    <input asp-for="ReservStartDate" type="datetime-local" parsley-trigger="change"
+                                           required class="form_contact form-control  datepicker">
+                                </div>
+                                <div class="names-and-details col-lg-6">
+                                    <label asp-for="ReservEndDate" class="contact_label">
+                                        Reservation End
+                                        Date<span class="text-danger"></span>
+                                    </label>
+                                    <span asp-validation-for="ReservEndDate" class="text-danger without"></span>
+                                    <input asp-for="ReservEndDate" type="datetime-local" parsley-trigger="change"
+                                           required class="form_contact form-control  datepicker">
+                                </div>
+                                <div class="names-and-details">
+                                    <label asp-for="RoomId" class="contact_label">
+                                        Select Room<span class="text-danger"></span>
+                                    </label>
+                                    <span asp-validation-for="RoomId" class="text-danger"></span>
+                                    <select class="form-control" asp-for="RoomId">
+                                        @foreach (var room in @Model.Rooms)
+                                        {
+                                            <option value="@room.Id">№ @room.RoomNumber</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="names-and-details">
+                                    <label asp-for="Additionals" class="contact_label">Additionals</label>
+                                    <span asp-validation-for="Additionals" class="text-danger"></span>
+                                    <textarea asp-for="Additionals" id="rezervtxtarea"
+                                              class="textarea_contact form-control"
+                                              placeholder="Your oppinion"></textarea>
+                                </div>
+                                <label>
+                                    <span class="text-danger form-action"></span>After Reservation, please
+                                    check the
+                                    email
+                                </label>
+                                <button class="send_contact_btn btn btn-primary">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              @*  <div class="col-lg-4">
+                    <div class="row">
+                        <div class="finds-us">
+                            <div class="rooms-div-detail">
+                                <div class="rooms-image-and-sect">
+                                    <div class="img-divset">
+                                        <img src="~/Manage/Assets/Uploads/RoomImage/@Model.Room." alt="">
+                                    </div>
+                                    <div class="booking-details">
+                                        <div class="booking-name">
+                                            <h4>Booking Details</h4>
+                                        </div>
+                                        <div class="checkin">
+                                            <span>Check In</span>
+                                            <p>@Model.ReservStartDate</p>
+                                        </div>
+                                        <div class="checkin">
+                                            <span>Check Out</span>
+                                            <p>@Model.ReservEndDate</p>
+                                        </div>
+                                        <div class="checkin">
+                                            <span>Nights</span>
+                                            <p>salam</p>
+                                        </div>
+                                        <div class="checkin">
+                                            <span>Guests</span>
+                                            <p>salam</p>
+                                        </div>
+                                        <div class="booking-name">
+                                            <h4>Price Summary</h4>
+                                        </div>
+                                        <div class="checkin">
+                                            <span>Room Price</span>
+                                            <p>@Model.RoomId</p>
+                                        </div>
+                                        <div class="checkin">
+                                            <span>Total Price</span>
+                                            <p>salam</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </section>
+</main>
+
+

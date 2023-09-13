@@ -1,0 +1,135 @@
+﻿@model SpaViewModel
+
+<main class="spa-page">
+
+    <section class="spass-title">
+        <div class="container-fluid">
+            <div class="row ms-0 me-0">
+                <div class="mt-4">
+                    <h1>Spa</h1>
+                    <h5><a href="./index.html">Home</a> / Spa</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modern">
+        <img src="./Assets/Images/spa-slid.jpg" alt="">
+        <div class="modern-text">
+            <img src="./Assets/Images/spa-slid.jpg" alt="">
+            <div class="modern-text-1">
+                <h1>WELCOME TO HIMARA SPA & WELLNESS</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="spa-page-text">
+        <div class="container">
+            <div class="row ms-0 me-0">
+                <div class="col-lg-12">
+                    <div class="spa-page-first-title">
+                        <h1 class="beauty">Beauty & Wellness Center</h1>
+                        <p class="first-title-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
+                            commodi incidunt labore unde minima numquam rerum, expedita itaque quibusdam ipsa
+                            consequuntur cupiditate, officia iure earum soluta voluptatem impedit pariatur rem!
+                            Nulla, error placeat! Animi harum, eveniet placeat excepturi perferendis, ex consectetur
+                            explicabo voluptatem totam hic, officiis quisquam? Similique eum itaque, delectus quo
+                            deserunt deleniti quibusdam alias sed commodi assumenda magnam unde provident
+                            praesentium doloribus a asperiores, amet dolores maiores, illo quis inventore sunt,
+                            nihil nemo pariatur!
+                        </p>
+                        <p class="first-title-text">
+                            Culpa neque sint accusantium laboriosam reiciendis corporis, veritatis quos, debitis
+                            doloremque adipisci repudiandae atque, minus! Atque libero, asperiores ex fugit, quia
+                            consequatur modi officiis! Magnam quae atque quasi natus minima optio nobis eveniet
+                            aspernatur vitae deserunt totam in sed, placeat odio cumque, accusantium ducimus.
+                            Molestias quasi ipsa libero vero dolorem recusandae iusto beatae quae architecto
+                            provident expedita debitis, animi enim labore deleniti ullam, a nobis asperiores aliquam
+                            necessitatibus error? Quia consequatur vero assumenda architecto ex, aliquid. Pariatur
+                            magnam atque nostrum, expedita repellendus ut error autem ratione repellat
+                            necessitatibus itaque libero architecto temporibus reprehenderit, explicabo provident.
+                        </p>
+                        <h1 class="beauty">Our Services</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="spa-page-cards">
+        <div class="container">
+            <div class="row g-4 ms-0 me-0">
+                @foreach (var item in Model.SpaServices)
+                {
+                    <div class="col-lg-3">
+                        <div class="spa-cards">
+                            <img src="./Assets/Images/@item.IconImage" alt="">
+                            <h5>@item.Name</h5>
+                        </div>
+                    </div>
+                }
+
+                <div class="col-lg-12">
+                    <div class="spa-page-second-title">
+                        <p class="second-title-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                            leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                            leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                            leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.
+                        </p>
+                        <p class="second-title-text">
+                            Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
+                            pulvinar dapibus leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut elit
+                            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                            dapibus leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="spa-page-text">
+        <div class="container">
+            <div class="row ms-0 me-0">
+                <div class="col-lg-12">
+                    <div class="spa-page-first-title">
+                        <h1 class="beauty">Our Awesome Staff</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="spa-cards-1">
+        <div class="container">
+            <div class="row g-4 ms-0 me-0">
+                @foreach (var item in Model.Staff)
+                {
+                    <div class="col-lg-3">
+                        <div class="spa-card">
+                            <img src="~/Manage/Assets/Uploads/StaffImage/@item.Image" alt="">
+                            <span class="position">@item.Position</span>
+                            <div class="spas-text">
+                                <h5>@item.Name</h5>
+                                <p>
+                                    @item.Description
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

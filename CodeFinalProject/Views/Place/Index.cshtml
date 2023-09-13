@@ -1,0 +1,30 @@
+﻿@model PlaceDetailViewModel
+<main class="places">
+    <section class="places-title">
+        <div class="container-fluid">
+            <div class="row ms-0 me-0">
+                <div>
+                    <h1>Places</h1>
+                    <h5><a asp-controller="home" asp-action="index">Home</a> / Places</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="place-card">
+        <div class="container-fluid">
+            <div class="row g-4 ms-0">
+                @foreach (var item in Model.Places)
+                {
+                    <div class="col-lg-3">
+                        <div class="place-card-design">
+                            <a asp-action="placedetail" asp-route-id="@item.Id"><img src="~/Manage/Assets/Uploads/PlaceImage/@item.Image" alt=""></a>
+                            <div class="title-1">
+                                <span>@item.Name</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

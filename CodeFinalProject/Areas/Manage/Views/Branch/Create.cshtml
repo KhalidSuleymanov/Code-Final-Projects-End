@@ -1,0 +1,33 @@
+﻿@model Branch
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h4 class="mt-4"> Branch Create </h4>
+        </div>
+        <div class="col-md-12">
+            <form method="post" asp-action="create" enctype="multipart/form-data">
+                <div class="form-group mt-2">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control mt-2" style="border:1px solid #fff;">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="Address">Address</label>
+                    <input asp-for="Address" class="form-control mt-2" style="border:1px solid #fff;">
+                    <span asp-validation-for="Address"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="ImageFile">File</label>
+                    <input onchange="readURL(this);" asp-for="ImageFile" class="form-control mt-2" style="border:1px solid #fff;">
+                    <span asp-validation-for="ImageFile"></span>
+                    <img width="100" height="100" id="blah" src="http://placehold.it/100" alt="your image" />
+                </div>
+                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+

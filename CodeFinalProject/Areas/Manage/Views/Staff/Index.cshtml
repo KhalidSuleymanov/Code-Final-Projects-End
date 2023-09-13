@@ -1,0 +1,95 @@
+﻿@using CodeFinalProject.Areas.Manage.ViewModels
+@model PaginatedList<Staff>
+@{
+    ViewData["Title"] = "Index";
+    var dataOrder = (Model.PageIndex - 1) * 5;
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Recent Salse</h6>
+            <a>Staffs</a>
+            <a asp-action="create" class="btn btn-success">Create</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        dataOrder++;
+                        <tr>
+                            <th scope="row">@dataOrder</th>
+                            <td>@item.Name</td>
+                            <td>@item.Description.Substring(0, 10)...</td>
+                            <td>@item.Position</td>
+                            <td>@item.Title</td>
+                            <td>
+                                <img width="60" height="60" src="~/Manage/Assets/Uploads/StaffImage/@item.Image" />
+                            </td>
+                            <td>
+                                <a asp-controller="staff" asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                                <a asp-controller="staff" asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger delete-btn">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <nav aria-label="...">
+                <ul class="pagination mt-4">
+                    <li class="page-item @(Model.HasPrevius ? "" : "disabled")">
+                        <a class="page-link" asp-route-page="@(Model.PageIndex-1)">Previous</a>
+                    </li>
+                    @if (Model.TotalPages <= 5)
+                    {
+                        for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == Model.PageIndex ? "active" : "")"><a class="page-link" asp-route-search="@ViewBag.Search" asp-route-page="@i">@i</a></li>
+                        }
+                    }
+                    else
+                    {
+                        int startPage = 1;
+                        int endPage = 5;
+                        if (Model.PageIndex > 3 && Model.PageIndex < Model.TotalPages - 2)
+                        {
+                            startPage = Model.PageIndex - 2;
+                            endPage = Model.PageIndex + 2;
+                        }
+                        else if (Model.PageIndex >= Model.TotalPages - 2)
+                        {
+                            startPage = Model.TotalPages - 4;
+                            endPage = Model.TotalPages;
+                        }
+                        if (startPage > 1)
+                        {
+                            <li class="page-item disabled"><a class="page-link">...</a></li>
+                        }
+                        for (int i = startPage; i <= endPage; i++)
+                        {
+                            <li class="page-item @(i == Model.PageIndex ? "active" : "")"><a class="page-link" asp-route-search="@ViewBag.Search" asp-route-page="@i">@i</a></li>
+                        }
+                        if (endPage < Model.TotalPages)
+                        {
+                            <li class="page-item disabled"><a class="page-link">...</a></li>
+                        }
+                    }
+                    <li class="page-item @(Model.HasNext ? "" : "disabled")">
+                        <a class="page-link" asp-route-page="@(Model.PageIndex+1)">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

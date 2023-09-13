@@ -1,0 +1,29 @@
+﻿@model HomeVM
+
+<main class="services">
+    <section class="services-title">
+        <div class="container-fluid">
+            <div class="row me-0 me-0">
+                <div class="mt-4 ms-4">
+                    <h1>Rooms Services</h1>
+                    <h5><a asp-controller="home" asp-action="index">Home</a> / Rooms Services</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services-cards">
+        <div class="container">
+            <div class="row g-4 ms-4 me-2">
+                @foreach (var item in Model.Services)
+                {
+                    <div class="col-lg-4">
+                        <div class="service">
+                            <i class="@item.IconImage"></i>
+                            <p>@item.Name</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

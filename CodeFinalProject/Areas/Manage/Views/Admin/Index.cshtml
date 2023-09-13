@@ -1,0 +1,42 @@
+﻿@model List<AdminDetailViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Recent Salse</h6>
+            <a>Admins</a>
+            <a asp-action="create" class="btn btn-success">Create</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                        <th scope="col">Fullname</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (!item.Roles.Contains("SuperAdmin"))
+                        {
+                            <tr>
+                                <td>@item.FullName</td>
+                                <td>@item.UserName</td>
+                                <td>@string.Join(',',item.Roles)</td>
+                                <td>
+                                    <a asp-action="edit" asp-route-id="@item.UserId" class="btn btn-warning">Edit</a>
+                                    <a asp-action="delete" asp-route-id="@item.UserId" class="btn btn-danger delete-btn">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,749 @@
+﻿@model HomeVM
+
+
+<main class="index-page-start">
+
+    <section class="full-video-sections">
+        <div class="videos">
+            <div class="first-slid-design">
+                <div class="first-slid-image-des">
+                    <video autoplay muted
+                           style="object-fit: cover; background-size: cover; opacity: 1; width: 1246px;  position: absolute; left: 0px; top: 0px; display: block;">
+                        <source src="//demo.himaratheme.com/summer/wp-content/uploads/sites/5/2022/09/maldives_video.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="first-slid-text-design">
+                    <h5>Enjoy A Luxury Experience</h5>
+                    <p>LIVE YOUR</p>
+                    <span>DREAM</span>
+                    <p>AT HIMARA HOTEL</p>
+                    <a class="btnsi" asp-action="index" asp-controller="room"><button class="btn">Book Your Stay</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="index-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="index-page-text">
+                        <div class="index-page-text-title">
+                            <h3>Hotel Himara Since 1990</h3>
+                            <span>We provide accommodation services since 1990</span>
+                            <p class="p1">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus deleniti
+                                nulla, hic voluptatibus eum voluptatum libero suscipit nemo voluptates cupiditate,
+                                ipsum provident facere modi tempora ducimus enim dicta laborum esse aliquam rem
+                                assumenda dolores.
+                            </p>
+                            <p class="p2">
+                                Commodi, aperiam, blanditiis! Ipsum iure necessitatibus eaque, fuga. Excepturi
+                                facilis libero dicta soluta officiis, sint sit voluptatem, vero doloribus nesciunt
+                                suscipit dolores veritatis minus quam atque non autem quasi consequatur quae sequi
+                                ex, ipsa facere qui ut recusandae. Quod earum cupiditate quaerat assumenda.Excepturi
+                                facilis libero dicta soluta officiis, sint sit voluptatem, vero doloribus nesciunt
+                                suscipit dolores veritatis minus quam atque non autem quasi consequatur quae sequi
+                                ex, ipsa facere qui ut recusandae.
+                            </p>
+                        </div>
+                        <div class="index-page-text-signatures row">
+                            <div class="col-lg-4">
+                                <div class="first-signature">
+                                    <img src="~/assets/Images/signature_manager.png" alt="">
+                                    <div class="signature-text">
+                                        <h5>Martin Doe</h5>
+                                        <span>Hotel Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="second-signature">
+                                    <img src="~/assets/Images/phone.png" alt="">
+                                    <div class="signature-text">
+                                        <h5>+100 244432434</h5>
+                                        <span>Reservation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="index-images">
+                        <div class="first-section-image">
+                            <div class="hover-image">
+                                <img src="~/assets/Images/logo-big-transparent.svg" alt="">
+                                <div class="hover-icons">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="title-and-text">
+                                    <h4>LUXURY HOTEL</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolorem iste
+                                        suscipit.Ad dolorem iste suscipit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-best-rooms-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="best-rooms-title">
+                        <h3>Our Best Rooms</h3>
+                    </div>
+                    <div class="best-rooms-text">
+                        <p class="best-p">Our best rooms available for your vacation.</p>
+                        <div class="hover-text">
+                            <a asp-action="index" asp-controller="room">
+                                <p class="best-p-1">View All Rooms</p>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-best-rooms">
+        <div class="container-fluid">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <div class="col-div">
+                        <a class="best-page" href="">
+                            <div class="best-rooms-images-and-text">
+                                <div class="best-images">
+                                    <img src="~/assets/Images/best-room-image-1.jpg" alt="">
+                                </div>
+                                <div class="best-rooms-price">
+                                    <span class="normal-price">
+                                        <span class="price-currency">
+                                            $
+                                        </span>
+                                        <span class="price-amount">
+                                            150,00
+                                        </span>
+                                    </span>
+                                    <span class="per-night-text">
+                                        / night
+                                    </span>
+                                </div>
+                                <div class="room-name-and-details">
+                                    <div class="room-details-inner">
+                                        <h4 class="room-titles">
+                                            Single Room
+                                        </h4>
+                                        <div class="room-info">
+                                            <div class="item">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <div class="room-info-content">
+                                                    3 Adults / 2 Children
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="room-info-content">
+                                                    Single
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div">
+                        <a class="best-page" href="">
+                            <div class="best-rooms-images-and-text">
+                                <div class="best-images">
+                                    <img src="~/assets/Images/best-room-image-2.jpg" alt="">
+                                </div>
+                                <div class="best-rooms-price">
+                                    <span class="normal-price">
+                                        <span class="price-currency">
+                                            $
+                                        </span>
+                                        <span class="price-amount">
+                                            500,00
+                                        </span>
+                                    </span>
+                                    <span class="per-night-text">
+                                        / night
+                                    </span>
+                                </div>
+                                <div class="room-name-and-details">
+                                    <div class="room-details-inner">
+                                        <h4 class="room-titles">
+                                            King Suite
+                                        </h4>
+                                        <div class="room-info">
+                                            <div class="item">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <div class="room-info-content">
+                                                    5 Adults / 1 Children
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="room-info-content">
+                                                    King Size
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div">
+                        <a class="best-page" href="">
+                            <div class="best-rooms-images-and-text">
+                                <div class="best-images">
+                                    <img src="~/assets/Images/best-room-image-3.jpg" alt="">
+                                </div>
+                                <div class="best-rooms-price">
+                                    <span class="normal-price">
+                                        <span class="price-currency">
+                                            $
+                                        </span>
+                                        <span class="price-amount">
+                                            200,00
+                                        </span>
+                                    </span>
+                                    <span class="per-night-text">
+                                        / night
+                                    </span>
+                                </div>
+                                <div class="room-name-and-details">
+                                    <div class="room-details-inner">
+                                        <h4 class="room-titles">
+                                            Double Room
+                                        </h4>
+                                        <div class="room-info">
+                                            <div class="item">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <div class="room-info-content">
+                                                    2Adults / 2 Children
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="room-info-content">
+                                                    Double
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div">
+                        <a class="best-page" href="">
+                            <div class="best-rooms-images-and-text">
+                                <div class="best-images">
+                                    <img src="~/assets/Images/best-room-image-4.jpg" alt="">
+                                </div>
+                                <div class="best-rooms-price">
+                                    <span class="normal-price">
+                                        <span class="price-currency">
+                                            $
+                                        </span>
+                                        <span class="price-amount">
+                                            450,00
+                                        </span>
+                                    </span>
+                                    <span class="per-night-text">
+                                        / night
+                                    </span>
+                                </div>
+                                <div class="room-name-and-details">
+                                    <div class="room-details-inner">
+                                        <h4 class="room-titles">
+                                            Deluxe Room
+                                        </h4>
+                                        <div class="room-info">
+                                            <div class="item">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <div class="room-info-content">
+                                                    2 Adults / 2 Children
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="room-info-content">
+                                                    2 Double
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div">
+                        <a class="best-page" href="">
+                            <div class="best-rooms-images-and-text">
+                                <div class="best-images">
+                                    <img src="~/assets/Images/best-room-image-5.jpg" alt="">
+                                </div>
+                                <div class="best-rooms-price">
+                                    <span class="normal-price">
+                                        <span class="price-currency">
+                                            $
+                                        </span>
+                                        <span class="price-amount">
+                                            250,00
+                                        </span>
+                                    </span>
+                                    <span class="per-night-text">
+                                        / night
+                                    </span>
+                                </div>
+                                <div class="room-name-and-details">
+                                    <div class="room-details-inner">
+                                        <h4 class="room-titles">
+                                            Triple Room
+                                        </h4>
+                                        <div class="room-info">
+                                            <div class="item">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <div class="room-info-content">
+                                                    3 Adults / 2 Children
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="room-info-content">
+                                                    Double
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div">
+                        <a class="best-page" href="">
+                            <div class="best-rooms-images-and-text">
+                                <div class="best-images">
+                                    <img src="~/assets/Images/best-room-image-6.jpg" alt="">
+                                </div>
+                                <div class="best-rooms-price">
+                                    <span class="normal-price">
+                                        <span class="price-currency">
+                                            $
+                                        </span>
+                                        <span class="price-amount">
+                                            350,00
+                                        </span>
+                                    </span>
+                                    <span class="per-night-text">
+                                        / night
+                                    </span>
+                                </div>
+                                <div class="room-name-and-details">
+                                    <div class="room-details-inner">
+                                        <h4 class="room-titles">
+                                            Family Room
+                                        </h4>
+                                        <div class="room-info">
+                                            <div class="item">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <div class="room-info-content">
+                                                    2 Adults / 2 Children
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="room-info-content">
+                                                    Double
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div">
+                        <a class="best-page" href="">
+                            <div class="best-rooms-images-and-text">
+                                <div class="best-images">
+                                    <img src="~/assets/Images/best-room-image-7.jpg" alt="">
+                                </div>
+                                <div class="best-rooms-price">
+                                    <span class="normal-price">
+                                        <span class="price-currency">
+                                            $
+                                        </span>
+                                        <span class="price-amount">
+                                            300,00
+                                        </span>
+                                    </span>
+                                    <span class="per-night-text">
+                                        / night
+                                    </span>
+                                </div>
+                                <div class="room-name-and-details">
+                                    <div class="room-details-inner">
+                                        <h4 class="room-titles">
+                                            Junior Suite
+                                        </h4>
+                                        <div class="room-info">
+                                            <div class="item">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <div class="room-info-content">
+                                                    2 Adults / 1 Children
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="room-info-content">
+                                                    Single
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div">
+                        <a class="best-page" href="">
+                            <div class="best-rooms-images-and-text">
+                                <div class="best-images">
+                                    <img src="~/assets/Images/best-room-image-8.jpg" alt="">
+                                </div>
+                                <div class="best-rooms-price">
+                                    <span class="normal-price">
+                                        <span class="price-currency">
+                                            $
+                                        </span>
+                                        <span class="price-amount">
+                                            450,00
+                                        </span>
+                                    </span>
+                                    <span class="per-night-text">
+                                        / night
+                                    </span>
+                                </div>
+                                <div class="room-name-and-details">
+                                    <div class="room-details-inner">
+                                        <h4 class="room-titles">
+                                            Luxury Suite
+                                        </h4>
+                                        <div class="room-info">
+                                            <div class="item">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <div class="room-info-content">
+                                                    5 Adults / 5 Children
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="room-info-content">
+                                                    4 Double
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="second-slider-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="second-title">
+                        <h3>The best places to stay</h3>
+                    </div>
+                    <div class="second-slider-text">
+                        <p class="second-slider-p">
+                            Plenty of services to assure your relaxation and comfortability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="second-slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="sliders">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="dots">
+                        <div class="pn">
+                            <div class="pn-div">
+                                <img src="~/assets/Images/second-slider-icon-1.png" alt="">
+                                <div class="icons-details">
+                                    <h4 class="icon-title">Swimming Pool</h4>
+                                    <p class="icon-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                        sollicitudin
+                                        elementum porta.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pn">
+                            <div class="pn-div">
+                                <img src="~/assets/Images/second-slider-icon-2.png" alt="">
+                                <div class="icons-details">
+                                    <h4 class="icon-title">Meeting Room</h4>
+                                    <p class="icon-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                        sollicitudin
+                                        elementum porta.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pn">
+                            <div class="pn-div">
+                                <img src="~/assets/Images/second-slider-icon-3.png" alt="">
+                                <div class="icons-details">
+                                    <h4 class="icon-title">Restaurant</h4>
+                                    <p class="icon-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Curabitur
+                                        sollicitudin
+                                        elementum porta.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pn">
+                            <div class="pn-div">
+                                <img src="~/assets/Images/second-slider-icon-4.png" alt="">
+                                <div class="icons-details">
+                                    <h4 class="icon-title">Spa</h4>
+                                    <p class="icon-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                        sollicitudin
+                                        elementum porta.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*Hotel staffs start*@
+
+    <section class="himara-staff-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="himarastaff-title">
+                        <h3>Meet Our Staff</h3>
+                    </div>
+                    <div class="himara-staffs-text">
+                        <p class="staff-p">A Team full of experts at their professions ready to give smiles.</p>
+                        <div class="hover-text">
+                            <a asp-action="index" asp-controller="ourstaff">
+                                <p class="staff-p-1">View All Staff</p>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="himara-staff-cards">
+        <div class="container-fluid">
+            <div class="himarasstaffcards row g-4">
+                @foreach (var item in Model.Staffs)
+                {
+                    <div class="col-lg-3">
+                        <div class="himara-staff-card">
+                            <img src="~/Manage/Assets/Uploads/StaffImage/@item.Image" alt="">
+                            <span class="positions">@item.Position</span>
+                            <div class="aves-text">
+                                <h5>@item.Name</h5>
+                                <p>@item.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    @*Hotel staffs ends*@
+
+    <section class="index-parallax-section">
+        <div class=parallax>
+            <div class="parallax-text">
+                <div class="container-fluid">
+                    <div class="rest-fut row">
+                        <div class="parallax-title col-lg-12">
+                            <div class="restaurant-title">
+                                <h3>Himara Restaurant</h3>
+                            </div>
+                            <div class="restaurant-text">
+                                <p class="rest-p">Some useful reviews from our guests on their experience here.</p>
+                                <div class="hover-text">
+                                    <a asp-action="index" asp-controller="restaurant">
+                                        <p class="rest-p-1">More Details About Our Restaurant</p>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        @foreach (var item in Model.Meals)
+                        {
+                            <div class="col-lg-6">
+                                <div class="menu-1">
+                                    <div class="menu-images">
+                                        <img src="~/Manage/Assets/Uploads/MealImage/@item.Image" alt="">
+                                    </div>
+                                    <div class="menu-description">
+                                        <div class="name-price">
+                                            <span class="eat-name">
+                                                @item.Name
+                                            </span>
+                                            <span class="price">
+                                                $@item.Price
+                                            </span>
+                                        </div>
+                                        <div class="menu-desc-text">
+                                            <p class="text-descr">
+                                                @item.Description
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*Hotel gallery start*@
+
+    <section class="himara-gallery-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="himaras-title">
+                        <h3>Himara Image Gallery</h3>
+                    </div>
+                    <div class="himara-gallerys-text">
+                        <p class="himara-p">Capture the experience of your vacation at Himara Hotel.</p>
+                        <div class="hover-text">
+                            <a asp-action="index" asp-controller="gallery">
+                                <p class="himara-p-1">View Full Gallery</p>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="himara-gallery-design">
+        <div class="container-fluid">
+            <div class="himara-gale row g-4">
+                @foreach (var item in Model.Galleries)
+                {
+                    <div class="col-lg-3">
+                        <div class="himara-gallery-pic-des">
+                            <img src="~/Manage/Assets/Uploads/GalleryImage/@item.Image" alt="">
+                            <div class="himara-gallery-title-1">
+                                <span class="himara-cart-hover-text">@item.Title</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    @*Hotel gallery ends*@
+
+    @*Hotel place start*@
+
+    <section class="himara-places-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="himaras-places-title">
+                        <h3>The best places to visit</h3>
+                    </div>
+                    <div class="himara-places-text">
+                        <p class="himara-places-p">
+                            Archeological and Astonishing places are to be explored by you.
+                        </p>
+                        <div class="hover-text">
+                            <a asp-action="index" asp-controller="place">
+                                <p class="himara-places-p-1">View All Places</p>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="place-card">
+        <div class="container-fluid">
+            <div class="places row g-4">
+                @foreach (var item in Model.Places)
+                {
+                    <div class="col-lg-3">
+                        <div class="place-card-design">
+                            <a href=""><img src="~/Manage/Assets/Uploads/PlaceImage/@item.Image" alt=""></a>
+                            <div class="title-1">
+                                <span>@item.Name</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    @*Hotel place end*@
+</main>

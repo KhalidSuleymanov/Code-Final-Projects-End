@@ -1,0 +1,278 @@
+﻿@model HomeVM
+<main class="gallery-staff">
+    <section class="gallery-title">
+        <div class="container">
+            <div class="row ms-3 me-0">
+                <div class="mt-4">
+                    <h1>Gallery</h1>
+                    <h5><a asp-controller="home" asp-action="index">Home</a> / Gallery</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery-des">
+        <div class="container">
+            <div class="row ms-3 me-2 g-4">
+                @foreach (var item in Model.Galleries)
+                {
+                    <div class="col-lg-3">
+                        <div onclick="cartclick(@item.ModalClick)" class="gallery-pic-des">
+                            <img src="~/Manage/Assets/Uploads/GalleryImage/@item.Image" alt="">
+                            <div class="title-1">
+                                <span class="cart-hover-text">@item.Title</span>
+                            </div>
+                            <div class="modal cart-modal-@item.ModalNumber d-none" role="dialog">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="modal-image col-lg-5">
+                                            <img src="~/Manage/Assets/Uploads/GalleryImage/@item.Image" alt="">
+                                            <div class="modal-text d-flex">
+                                                <h1>Swimming Pool</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @*<div class="col-lg-3">
+                    <div onclick="cartclick(2)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-2.jpg" alt="">
+                        <div class="title-1">
+                            <div>
+                                <span class="cart-hover-text">Room View</span>
+                            </div>
+                        </div>
+                        <div class="modal cart-modal-2 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-5">
+                                        <img src="./Assets/Images/gallery-2.jpg" alt="">
+                                        <div class="modal-text d-flex">
+                                            <h1>Room View</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(3)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-3.jpg" alt="">
+                        <div class="title-1">
+                            <div>
+                                <span class="cart-hover-text">Cocktail</span>
+                            </div>
+                        </div>
+                        <div class="modal cart-modal-3 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-5">
+                                        <img src="./Assets/Images/gallery-3.jpg" alt="">
+                                        <div class="modal-text d-flex">
+                                            <h1>Cocktail</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(4)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-4.jpg" alt="">
+                        <div class="title-1">
+                            <div>
+                                <span class="cart-hover-text">Breakfast</span>
+                            </div>
+                        </div>
+                        <div class="modal cart-modal-4 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-5">
+                                        <img src="./Assets/Images/gallery-4.jpg" alt="">
+                                        <div class="modal-text d-flex">
+                                            <h1>Breakfast</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(5)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-5.jpg" alt="">
+                        <div class="title-1">
+                            <div>
+                                <span class="cart-hover-text">Playground</span>
+                            </div>
+                        </div>
+                        <div class="modal cart-modal-5 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-5">
+                                        <img src="./Assets/Images/gallery-5.jpg" alt="">
+                                        <div class="modal-text d-flex">
+                                            <h1>Playground</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(6)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-6.jpg" alt="">
+                        <div class="title-1">
+                            <span class="cart-hover-text">Restaurant</span>
+                        </div>
+                        <div class="modal cart-modal-6 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-5">
+                                        <img src="./Assets/Images/gallery-6.jpg" alt="">
+                                        <div class="modal-text d-flex">
+                                            <h1>Restaurant</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(7)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-7.jpg" alt="">
+                        <div class="title-1">
+                            <div>
+                                <span class="cart-hover-text">Wedding</span>
+                            </div>
+                            <div class="modal cart-modal-7 d-none" role="dialog">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="modal-image col-lg-5">
+                                            <img src="./Assets/Images/gallery-7.jpg" alt="">
+                                            <div class="modal-text d-flex">
+                                                <h1>Wedding</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(8)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-8.jpg" alt="">
+                        <div class="title-1">
+                            <div>
+                                <span class="cart-hover-text">Beach</span>
+                            </div>
+                            <div class="modal cart-modal-8 d-none" role="dialog">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="modal-image col-lg-5">
+                                            <img src="./Assets/Images/gallery-8.jpg" alt="">
+                                            <div class="modal-text d-flex">
+                                                <h1>Beach</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(9)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-9.jpg" alt="">
+                        <div class="title-1">
+                            <span class="cart-hover-text">Room</span>
+                        </div>
+                        <div class="modal cart-modal-9 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-5">
+                                        <img src="./Assets/Images/gallery-9.jpg" alt="">
+                                        <div class="modal-text d-flex">
+                                            <h1>Room</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(10)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-10.jpg" alt="">
+                        <div class="title-1">
+                            <div>
+                                <span class="cart-hover-text">Sea</span>
+                            </div>
+                            <div class="modal cart-modal-10 d-none" role="dialog">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="modal-image col-lg-5">
+                                            <img src="./Assets/Images/gallery-10.jpg" alt="">
+                                            <div class="modal-text d-flex">
+                                                <h1>Sea</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(11)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-11.jpg" alt="">
+                        <div class="title-1">
+                            <div>
+                                <span class="cart-hover-text">Spa Therapy</span>
+                            </div>
+                            <div class="modal cart-modal-11 d-none" role="dialog">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="modal-image col-lg-5">
+                                            <img src="./Assets/Images/gallery-11.jpg" alt="">
+                                            <div class="modal-text d-flex">
+                                                <h1>Spa Therapy</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div onclick="cartclick(12)" class="gallery-pic-des">
+                        <img src="./Assets/Images/gallery-12.jpg" alt="">
+                        <div class="title-1">
+                            <span class="cart-hover-text">Launch</span>
+                        </div>
+                        <div class="modal cart-modal-12 d-none" role="dialog">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="modal-image col-lg-5">
+                                        <img src="./Assets/Images/gallery-12.jpg" alt="">
+                                        <div class="modal-text d-flex">
+                                            <h1>Launch</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </section>
+</main>

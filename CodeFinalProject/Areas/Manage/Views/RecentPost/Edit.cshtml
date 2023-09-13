@@ -1,0 +1,21 @@
+﻿@model RecentPost
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h4 class="mt-4">Recent Post Edit</h4>
+        </div>
+        <div class="col-md-12">
+            <form method="post" asp-action="edit" enctype="multipart/form-data">
+                <div class="form-group mt-2">
+                    <label asp-for="Title">Title</label>
+                    <input asp-for="Title" class="form-control style="border:1px solid #fff;">
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
